@@ -11,7 +11,7 @@
 
 
 ## Overview
-This project aims to explore and analyze a telcom customer churn dataset to identify major drivers of customer churn and recommend retention strategies.
+This project aims to explore and analyze a telcom customer churn dataset to identify major drivers of customer churn and recommend a retention strategy.
 
 ## Project Structure
 
