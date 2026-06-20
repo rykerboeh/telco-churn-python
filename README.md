@@ -7,18 +7,14 @@
 ![Microsoft Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-An end-to-end data engineering and analytics pipeline that ingests raw, multi-source building utility consumption data, implements a tiered SQL cleaning and aggregation workflow, constructs a 2030 net-zero forcast model in Python, and produces an executive-ready emissions dashboard in Tableau.
-
-This project aims to explore and analyze a telcom customer churn dataset to identify major drivers of customer churn and recommend a retention strategy. 
+A churn-focused analytics workflow that ingests raw customer profiles, telecom plan information, and churn status, leveraging python statistical modeling to uncover churn trends and constructs customer segments to inform an actionable retention strategy for the organization.
 
 ---
 
 ## Business Case & Objectives
-The organization in question aims to acheive a net-zero carbon footprint, but lacks visibility into what business activities and real estate assets are driving environmental liabilities. The raw data is fragmented across multiple databases.
+The organization in question aims to reduce customer churn and maintain a healthy portfolio, but lacks visibility into what variables affect customer churn.
 
-This project aims to centralize the fragmented data into a unified consumption database, calculate a functional weighted carbon intensity metric, and craft a "business-as-usual" projection to track consumption against 2030 net-zero milestones.
-
-The telco churn project aims to leverage python to clean and analyze sample customer churn data to provide valuable churn insights and an actionable retention strategy for company stakeholders.
+This project aims to uncover which variables have the highest correlation with customer churn and define customer segments in order to construct a high-value customer retention strategy.
 
 ---
 
@@ -56,9 +52,8 @@ The telco churn project aims to leverage python to clean and analyze sample cust
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/rykerboeh/net-zero-analytics-pipeline.git](https://github.com/rykerboeh/net-zero-analytics-pipeline.git)
-cd net-zero-analytics-pipeline
-cd net-zero-analytics-pipeline
+git clone [https://github.com/rykerboeh/telco-churn-python.git](https://github.com/rykerboeh/telco-churn-python.git)
+cd telco-churn-python
 ```
 
 ### 2. Set Up the Python Environment
@@ -68,27 +63,8 @@ Install dependencies using the provided environment specifications:
 pip install -r requirements.txt
 ```
 
-### 3. Source the Raw Data
-* Download the raw building and telemetry datasets directly from https://www.kaggle.com/datasets/cdaclab/unicon/data.
+### 3. Execute the Analytical Notebook
 
-* Place the raw files into your local data/raw/ directory (Note: This directory is blocked by .gitignore to protect storage boundaries).
-
-### 4. Execute the SQL Pipeline & Analytical Notebook
-* Run files 01_ through 03_ in your preferred SQL relational database management engine to build the underlying target structures.
-
-* Run notebooks/carbon_footprint_net_zero.ipynb to generate the processed CSV data output files.
-
-* Open dashboard/executive_emissions_overview.twbx using Tableau Desktop or Tableau Public to explore the user interface.
-
+* Run notebooks/carbon_footprint_net_zero.ipynb 
 
 Developed by Ryker Boeh — Connect with me on https://www.linkedin.com/in/rboeh
-
-
-## Dataset
-The dataset used in this project contains sample churn data from a telecommunication company. Values include contract type, contract add-ons, monthly charge, total charges, contract status, churn rating, tenure in months, and churn reason.
-
-## Database
-To facilitate data management and analysis, the dataset was read into a python jupyter notebook. Python provides access to dynamic analytic libraries such as numpy, pandas, matplotlib, and seaborn enabling churn analysis, correlation analysis, and customer segmentation. 
-
-## Data Processing
-The data contained in this Kaggle dataset was relatively clean for this application. Python was used to explore the dataset's shape, schema, and datatypes. It was then used to rule out duplicate rows and missing data and ensure consistent formatting.
